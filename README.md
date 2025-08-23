@@ -3,7 +3,7 @@
 A fun and interactive **Tic Tac Toe** game built with **HTML, CSS, and JavaScript**.
 You can play against a **friend** or challenge the **bot**!
 
-![Tic Tac Toe Demo]![alt text](./images/Tic-Tac-Toe-Demo.png)
+[alt text](./images/Tic-Tac-Toe-Demo.png)
 
 ---
 
@@ -80,15 +80,15 @@ Tic-Tac-Toe-game/
 
 ### Game Mode Selection
 
-![Choose Game Mode]![alt text](./images/chooseGameMode.png)
+[alt text](./images/chooseGameMode.png)
 
 ### Player Selection
 
-![Player Selection]![alt text](./images/playerSelection.png)
+[alt text](./images/playerSelection.png)
 
 ### Game Board
 
-![Game Board]![alt text](./images/gameBoard.png)
+[alt text](./images/gameBoard.png)
 
 ---
 
@@ -102,4 +102,4 @@ Developed by [**Shahid Falah**](https://github.com/shahidfalah)
 
 ## 📝 License
 
-This project is open-source and available under the **MIT License**.
+This project is open-source.
