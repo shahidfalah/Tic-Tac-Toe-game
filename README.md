@@ -3,7 +3,7 @@
 A fun and interactive **Tic Tac Toe** game built with **HTML, CSS, and JavaScript**.
 You can play against a **friend** or challenge the **bot**!
 
-[alt text](./images/Tic-Tac-Toe-Demo.png)
+![alt text](./images/Tic-Tac-Toe-Demo.png)
 
 ---
 
@@ -80,15 +80,15 @@ Tic-Tac-Toe-game/
 
 ### Game Mode Selection
 
-[alt text](./images/chooseGameMode.png)
+![alt text](./images/chooseGameMode.png)
 
 ### Player Selection
 
-[alt text](./images/playerSelection.png)
+![alt text](./images/playerSelection.png)
 
 ### Game Board
 
-[alt text](./images/gameBoard.png)
+![alt text](./images/gameBoard.png)
 
 ---
 
