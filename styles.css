@@ -1,0 +1,350 @@
+/* ==== Making the case for CSS normalize and reset stylesheets in 2023 ==== */
+/* @import "modern-normalize"; */
+
+:root {
+    line-height: 1.5;
+    --background-color: #131515;
+    --jet: #2b2c28ff; /* border, Card */
+    --primary-color: #035cc2; /* Primary text, Button */
+    --tiffany-blue: #00b0fc; /* Text (titles, captions), Icon, Hover */
+    --snow: #fffafbff; /* Secondary text */
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+    margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: inherit;
+    font-weight: inherit;
+    color: var(--tiffany-blue);
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+/* ==== / Making the case for CSS normalize and reset stylesheets in 2023 / ==== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--background-color);
+    color: var(--snow);
+}
+
+main {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+p {
+    font-size: 1rem;
+    color: var(--snow);
+    margin-bottom: 1rem;
+}
+button {
+    background-color: var(--primary-color);
+    color: var(--snow);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--tiffany-blue);
+}
+
+
+/* ======== STYLE: Navigation Bar ======== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #00273a;
+    border-bottom: 2px solid var(--tiffany-blue);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+nav .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+nav .logo h1 {
+    font-size: 1.5rem;
+    color: var(--tiffany-blue);
+    margin: 0;
+}
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--snow);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+nav ul li a:hover {
+    background-color: var(--tiffany-blue);
+    color: var(--night);
+}
+/* ======== / STYLE: Navigation Bar / ======== */
+
+
+/* ======== STYLE: player display ======== */
+.player-display .container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.player-display #start-button {
+    width: 500px;
+}
+.player-one, .player-two {
+    padding: 1rem;
+    border: 2px solid var(--jet);
+    border-radius: 10px;
+    background: var(--night);
+    position: relative;
+    width: 250px;
+}
+
+.player.main {
+    border: 2px solid var(--persian-green);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    transition: all 0.3s;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 0.2s;
+}
+
+.player:hover {
+    background: var(--jet);
+    transform: scale(1.02);
+}
+
+.player img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.player.main img {
+    width: 100px;
+    height: 100px;
+}
+
+.player div {
+    text-align: center;
+    color: var(--snow);
+    margin-top: 5px;
+}
+
+.player h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--tiffany-blue);
+}
+
+.player p {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Selection List */
+.player-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    max-height: 300px;  
+    overflow-y: auto;
+    margin-top: 10px;
+    border: 1px solid var(--jet);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.select-btn {
+    background: var(--persian-green);
+    color: var(--night);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    transition: all 0.2s;
+}
+
+.select-btn:hover {
+    background: var(--tiffany-blue);
+    transform: translateY(-2px);
+}
+@media (max-width:480px) {
+    .player-display .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .player-display #start-button {
+        width: 200px;
+        margin-bottom:5rem ;
+    }
+}
+
+/* ======== / STYLE: player display / ======== */
+
+
+/* ======== STYLE: game board ======== */
+#game-board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 600px;
+    margin: auto;
+    padding-bottom:4rem;
+
+}
+/* user information styles & image & name ...ets*/
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.user-info .player-info-x, .user-info .player-info-o {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--jet);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+}
+.user-info .player-info-x.active, .user-info .player-info-o.active {
+    border: var(--tiffany-blue) solid 2px;
+}
+.user-info .player-info-x div, .user-info .player-info-o div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--snow);
+}
+.user-info .player-info-x:hover, .user-info .player-info-o:hover {
+    background-color: var(--tiffany-blue);
+}
+.user-info .player-info-x:hover h4, .user-info .player-info-o:hover h4{
+    color: var(--primary-color);
+}
+.user-info img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.user-info h2 {
+    font-size: 1.2rem;
+    color: var(--tiffany-blue);
+}
+/* the result massage style */
+#result-message {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--tiffany-blue);
+    margin-top: 1rem;
+}
+#result-message span {
+    font-weight: bold;
+}
+/* game board container and cells style */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 1rem;
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem 0;
+
+}
+.cell {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: var(--jet);
+    border: 3px solid var(--jet);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.cell:hover {
+    background-color: #00273a;
+}
+@media (max-width:480px) {
+    .user-info{
+        flex-direction: column;
+        align-items: center;
+    }
+    .user-info .player-info-x, .user-info .player-info-o {
+        width: 300px;
+    }
+    .grid-container{
+        margin: 1.rem;
+    }
+}
+/* ======== / STYLE: game board / ======== */
