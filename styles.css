@@ -123,6 +123,11 @@ nav ul li a:hover {
     background-color: var(--tiffany-blue);
     color: var(--night);
 }
+@media (max-width:480px) {
+    nav ul li a span {
+        display: none;
+    }
+}
 /* ======== / STYLE: Navigation Bar / ======== */
 
 
